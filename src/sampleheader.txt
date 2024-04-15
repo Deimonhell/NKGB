@@ -1,0 +1,7 @@
+#pragma once
+#include <stdio.h>
+#include <tgbot/tgbot.h>
+#include <iostream>
+
+#define SQLITECPP_COMPILE_DLL
+#include <SQLiteCpp/SQLiteCpp.h>

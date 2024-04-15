@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <tgbot/tgbot.h>
+#include <iostream>
+
+
+
+int main() {
+
+    
+
+    try {
+        printf("Bot username: %s\n", bot.getApi().getMe()->username.c_str());
+        TgBot::TgLongPoll longPoll(bot);
+        while (true) {
+            printf("Long poll started\n");
+            longPoll.start();
+        }
+    }
+    catch (TgBot::TgException& e) {
+        printf("error: %s\n", e.what());
+    }
+
+    return 0;
+}
